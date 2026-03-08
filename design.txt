@@ -1,0 +1,36 @@
+1. What data structure did you choose to store your contacts?
+- I chose to use a map<string, Contact>. The key is the contact name and the 
+value is the Contact struct.
+
+2. What are the positive aspects of your data structure choice?  Consider ease 
+of coding/understanding and the efficiency of each function.
+- Using a map makes the code easy to understand because each contact is has a 
+unique name. Adding, removing, and finding contacts by name uses log n time
+which is very efficient. Another  benefit is that the map automatically 
+keeps contacts sorted alphabetically by name, which makes exporting the
+contacts to a CSV file in order simple to implement.
+
+3. What (if any) drawbacks does your design choice have?
+- One drawback of using a map is that it uses more memory than simple
+structures like vectors since they're organized as binary search trees.
+
+4. What other data structures did you consider before choosing the one you did?  
+What differences between the data structures were relevant to your choice?  
+(You must describe the tradeoffs between at least 3 data structures, including 
+your final choice)
+- I thought about using a vector<Contact> at first but that would requires linear
+searches for finding and removing contacts, which is inefficient.
+- There are also unordered_maps which allows  fast lookups but they don't
+maintain alphabetical order. It would complicate exporting the contacts.
+- A map gives fast lookups while also keeping everything sorted,
+which made it the best choice for this assignment.
+
+
+5. Did you encounter any surprises with your data structure during the coding 
+phase?  Did you have to make any changes to your design?
+
+
+6. Describe your approach to solving the partial search problem 
+(FindAllContacts()). How efficient was your solution?  Do you think there would
+be a more efficient solution possible for handling a large number of searches 
+on a large directory?
